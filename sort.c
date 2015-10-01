@@ -57,10 +57,12 @@ void insertion_sort(int *numbers, unsigned count) {
 	memcpy(numbers, new, count*sizeof(int));
 }
 
+//You have to have a function that takes in 2 void* and returns an int for using qsort
 int	qcompare(const void* a, const void* b)
 {
 	return *(const int*)a - *(const int*)b;
 }
+
 void quick_sort(int* numbers, unsigned count)
 {
 	qsort(numbers, count, sizeof(int), qcompare);
