@@ -60,7 +60,7 @@ void insertion_sort(int *numbers, unsigned count) {
 //You have to have a function that takes in 2 void* and returns an int for using qsort
 int	qcompare(const void* a, const void* b)
 {
-	return *(const int*)a - *(const int*)b;
+	return compare(*(int*)a,*(int*)b);
 }
 
 void quick_sort(int* numbers, unsigned count)
